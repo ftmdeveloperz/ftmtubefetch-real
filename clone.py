@@ -1,7 +1,7 @@
 import os
 import subprocess
 from pyrogram import Client, filters
-from ftm import GITHUB_REPO, DEV_CREDIT  # Extracting values from ftm.py
+from ftm import Config  # Extracting values from ftm.py
 
 @Client.on_message(filters.command("clonebot"))
 async def clone_bot(client, message):
