@@ -1,13 +1,10 @@
-# ©️ LISA-KOREA | @LISA_FAN_LK | NT_BOT_CHANNEL | LISA-KOREA/YouTube-Video-Download-Bot
-
-# [⚠️ Do not change this repo link ⚠️] :- https://github.com/LISA-KOREA/YouTube-Video-Download-Bot
 
 
 
 from pyrogram import Client, filters
 import datetime
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
-from Youtube.config import Config
+from ftm import Config  # ✅ Correct
 from Youtube.script import Translation
 from Youtube.forcesub import handle_force_subscribe
 
@@ -26,7 +23,7 @@ else:
 
 
 
-########################🎊 Lisa | NT BOTS 🎊######################################################
+########################🎊 Fᴛᴍ Dᴇᴠᴇʟᴏᴘᴇʀᴢ 🎊######################################################
 @Client.on_callback_query(filters.regex("cancel"))
 async def cancel(client, callback_query):
     await callback_query.message.delete()
@@ -97,4 +94,4 @@ async def help(client, message):
     await message.reply_text(help_text)
 
 
-########################🎊 Lisa | NT BOTS 🎊######################################################
+########################🎊 Fᴛᴍ DᴇᴠᴇʟᴏᴘᴇʀᴢS 🎊######################################################
