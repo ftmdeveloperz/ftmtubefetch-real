@@ -1,23 +1,22 @@
-
-
 from pyrogram import Client, filters
-from Youtube.config import Config
+import os
+import premium  # Import premium features
+import clone  # Import bot cloning
+
+# Dynamically import everything from ftm.py
+from Youtube import ftm  
 
 # Create a Pyrogram client
 app = Client(
     "my_bot",
-    api_id=Config.API_ID, 
-    api_hash=Config.API_HASH, 
-    bot_token=Config.BOT_TOKEN,
+    api_id=ftm.API_ID, 
+    api_hash=ftm.API_HASH, 
+    bot_token=ftm.BOT_TOKEN,
     plugins=dict(root="Youtube")
 )
 
-
-
 # Start the bot
 print("🎊 🎊 I AM ALIVE 🎊 & Powered by Fᴛᴍ Dᴇᴠᴇʟᴏᴘᴇʀᴢ 🚀")
-app.run()
-import os
-PORT = int(os.environ.get("PORT", 8080))
 
+PORT = int(os.environ.get("PORT", 8080))
 app.run(port=PORT)
