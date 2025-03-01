@@ -8,7 +8,7 @@ import asyncio
 import yt_dlp
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from Youtube.ftm import HTTP_PROXY
+from ftm import Config 
 from Youtube.forcesub import handle_force_subscribe
 
 youtube_dl_username = None  
