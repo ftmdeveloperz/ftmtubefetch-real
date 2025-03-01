@@ -8,7 +8,7 @@ import asyncio
 import yt_dlp
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from Youtube.config import Config
+from Youtube.ftm import HTTP_PROXY
 from Youtube.forcesub import handle_force_subscribe
 
 youtube_dl_username = None  
@@ -56,8 +56,8 @@ async def handle_download_button(client, callback_query):
             'cookiefile': 'cookies.txt'
         }
 
-        if Config.HTTP_PROXY != "":
-            ydl_opts['proxy'] = Config.HTTP_PROXY
+        if HTTP_PROXY != "":
+            ydl_opts['proxy'] = HTTP_PROXY
         if youtube_dl_username is not None:
             ydl_opts['username'] = youtube_dl_username
         if youtube_dl_password is not None:
