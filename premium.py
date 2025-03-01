@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 from pyrogram import Client, filters
-from ftm import OWNER_ID, DEV_CREDIT  # Extracting values from ftm.py
+from ftm import Config  # Extracting values from ftm.py
 
 # Load user data
 try:
