@@ -1,11 +1,11 @@
 import asyncio
 from pyrogram import Client, enums
-from Youtube.config import Config
+from ftm import Config  # ✅ Correct
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
-########################🎊 Lisa | NT BOTS 🎊######################################################
+########################🎊 Fᴛᴍ Dᴇᴠᴇʟᴏᴘᴇʀᴢ 🎊######################################################
 
 async def handle_force_subscribe(bot, message):
     try:
@@ -44,4 +44,4 @@ async def handle_force_subscribe(bot, message):
         )
         return 400
 
-########################🎊 Lisa | NT BOTS 🎊######################################################
+########################🎊 Fᴛᴍ Dᴇᴠᴇʟᴏᴘᴇʀᴢ 🎊######################################################
