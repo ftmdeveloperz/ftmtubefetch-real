@@ -55,14 +55,6 @@ async def handle_download_button(client, callback_query):
             'progress_hooks': [lambda d: print(d['status'])],
             'cookiefile': 'cookies.txt'
         }
-
-        if HTTP_PROXY != "":
-            ydl_opts['proxy'] = HTTP_PROXY
-        if youtube_dl_username is not None:
-            ydl_opts['username'] = youtube_dl_username
-        if youtube_dl_password is not None:
-            ydl_opts['password'] = youtube_dl_password
-
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(youtube_link, download=False)
             title = info_dict.get('title', None)
